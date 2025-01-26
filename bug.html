@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    // Incorrectly attempting to access the textContent of a non-existent element
+    let element = document.getElementById("myNonExistentDiv");
+    if (element) {
+      console.log(element.textContent);
+    }
+  </script>
+</body>
+</html>
