@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    // Correctly accessing the textContent of an element, checking for existence first
+    let element = document.getElementById("myDiv");
+    if (element) {
+      console.log(element.textContent); //This works correctly
+    } else {
+      console.log("Element not found");
+    }
+    let nonExistentElement = document.getElementById("myNonExistentDiv");
+    if (nonExistentElement){
+        console.log(nonExistentElement.textContent);
+    } else {
+        console.log("Element myNonExistentDiv not found");
+    }
+  </script>
+</body>
+</html>
